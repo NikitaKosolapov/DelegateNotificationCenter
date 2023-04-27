@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1173A7D029F9AF0700840B00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173A7CF29F9AF0700840B00 /* AppDelegate.swift */; };
-		1173A7D229F9AF0700840B00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173A7D129F9AF0700840B00 /* SceneDelegate.swift */; };
 		1173A7D429F9AF0700840B00 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173A7D329F9AF0700840B00 /* FirstViewController.swift */; };
 		1173A7D729F9AF0700840B00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1173A7D529F9AF0700840B00 /* Main.storyboard */; };
 		1173A7D929F9AF0800840B00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1173A7D829F9AF0800840B00 /* Assets.xcassets */; };
@@ -34,7 +33,6 @@
 /* Begin PBXFileReference section */
 		1173A7CC29F9AF0700840B00 /* NotificationCenterDelegate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotificationCenterDelegate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1173A7CF29F9AF0700840B00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1173A7D129F9AF0700840B00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1173A7D329F9AF0700840B00 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		1173A7D629F9AF0700840B00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1173A7D829F9AF0800840B00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,7 +68,7 @@
 		1173A7C329F9AF0700840B00 = {
 			isa = PBXGroup;
 			children = (
-				1173A7CE29F9AF0700840B00 /* NotificationCenterDelegate */,
+				1173A7CE29F9AF0700840B00 /* Example */,
 				1173A81229F9C1B800840B00 /* NotificationCenterDelegateTests */,
 				1173A7CD29F9AF0700840B00 /* Products */,
 			);
@@ -85,23 +83,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1173A7CE29F9AF0700840B00 /* NotificationCenterDelegate */ = {
+		1173A7CE29F9AF0700840B00 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				1173A81D29FA683900840B00 /* MyAppNotificationCenter */,
+				1173A81C29FA682E00840B00 /* ViewControllers */,
 				1173A7CF29F9AF0700840B00 /* AppDelegate.swift */,
-				1173A7D129F9AF0700840B00 /* SceneDelegate.swift */,
-				1173A7D329F9AF0700840B00 /* FirstViewController.swift */,
-				1173A7E329F9AF9800840B00 /* SecondViewController.swift */,
-				1173A7E529F9AFA900840B00 /* ThirdViewController.swift */,
 				1173A7D529F9AF0700840B00 /* Main.storyboard */,
 				1173A7D829F9AF0800840B00 /* Assets.xcassets */,
 				1173A7DA29F9AF0900840B00 /* LaunchScreen.storyboard */,
 				1173A7DD29F9AF0900840B00 /* Info.plist */,
-				1173A7E729F9B14700840B00 /* FirstViewControllerDelegate.swift */,
-				1173A7E929F9B17200840B00 /* MulticastDelegate.swift */,
-				1173A7EB29F9B19000840B00 /* MyAppNotificationCenter.swift */,
 			);
-			path = NotificationCenterDelegate;
+			path = Example;
 			sourceTree = "<group>";
 		};
 		1173A81229F9C1B800840B00 /* NotificationCenterDelegateTests */ = {
@@ -110,6 +103,26 @@
 				1173A81329F9C1B800840B00 /* NotificationCenterDelegateTests.swift */,
 			);
 			path = NotificationCenterDelegateTests;
+			sourceTree = "<group>";
+		};
+		1173A81C29FA682E00840B00 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1173A7D329F9AF0700840B00 /* FirstViewController.swift */,
+				1173A7E329F9AF9800840B00 /* SecondViewController.swift */,
+				1173A7E529F9AFA900840B00 /* ThirdViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1173A81D29FA683900840B00 /* MyAppNotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				1173A7E729F9B14700840B00 /* FirstViewControllerDelegate.swift */,
+				1173A7E929F9B17200840B00 /* MulticastDelegate.swift */,
+				1173A7EB29F9B19000840B00 /* MyAppNotificationCenter.swift */,
+			);
+			path = MyAppNotificationCenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,7 +183,7 @@
 				};
 			};
 			buildConfigurationList = 1173A7C729F9AF0700840B00 /* Build configuration list for PBXProject "NotificationCenterDelegate" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -219,7 +232,6 @@
 				1173A7D429F9AF0700840B00 /* FirstViewController.swift in Sources */,
 				1173A7E629F9AFA900840B00 /* ThirdViewController.swift in Sources */,
 				1173A7D029F9AF0700840B00 /* AppDelegate.swift in Sources */,
-				1173A7D229F9AF0700840B00 /* SceneDelegate.swift in Sources */,
 				1173A7EC29F9B19000840B00 /* MyAppNotificationCenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,7 +324,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -366,7 +377,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -384,12 +394,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NotificationCenterDelegate/Info.plist;
+				INFOPLIST_FILE = Example/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -411,12 +422,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NotificationCenterDelegate/Info.plist;
+				INFOPLIST_FILE = Example/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
