@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mIO-Jc-BtE">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -18,7 +19,7 @@
                         <viewLayoutGuide key="safeArea" id="YVN-mn-Hio"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Third" image="doc" catalog="system" id="WzT-uG-dzh"/>
+                    <tabBarItem key="tabBarItem" title="Third" id="WzT-uG-dzh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2wJ-d4-m8r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,7 +49,7 @@
                             <constraint firstItem="5j8-7F-3Qe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="w9Y-7n-OMv"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="homekit" catalog="system" id="ktc-3F-wFn"/>
+                    <tabBarItem key="tabBarItem" title="First" id="ktc-3F-wFn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,6 +61,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="mIO-Jc-BtE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VJV-jF-hEk">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -83,7 +85,7 @@
                         <viewLayoutGuide key="safeArea" id="Iaf-JQ-jYW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="heart" catalog="system" id="Itd-Fb-wH5"/>
+                    <tabBarItem key="tabBarItem" title="Second" id="Itd-Fb-wH5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BqV-Eq-0vt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -91,9 +93,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="doc" catalog="system" width="115" height="128"/>
-        <image name="heart" catalog="system" width="128" height="107"/>
-        <image name="homekit" catalog="system" width="128" height="104"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
