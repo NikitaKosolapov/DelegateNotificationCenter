@@ -3,7 +3,9 @@
 Super simple and most reliable solution to replace NotificationCenter.
 
 ✅ Type Safe
+
 ✅ Thread Safe
+
 ✅ Memory Safety
 
 This is a one-to-one delegation to multiple receivers based on Composite design pattern
