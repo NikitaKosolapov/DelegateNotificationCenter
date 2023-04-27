@@ -10,6 +10,10 @@ import Foundation
 public class MulticastDelegate<T> {
     private let delegates: NSHashTable<AnyObject> = NSHashTable.weakObjects()
     
+    public var delegatesCount: Int {
+        delegates.allObjects.count
+    }
+    
     public func delegate(_ delegate: T) {
         delegates.add(delegate as AnyObject)
     }
@@ -24,10 +28,5 @@ public class MulticastDelegate<T> {
         for delegate in delegates.allObjects.reversed() {
             block(delegate as! T)
         }
-    }
-    
-    /// For unit tests
-    public func delegateCount() -> Int {
-        return delegates.allObjects.count
     }
 }

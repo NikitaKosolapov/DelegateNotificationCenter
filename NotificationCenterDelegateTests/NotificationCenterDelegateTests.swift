@@ -11,34 +11,43 @@ import XCTest
 final class NotificationCenterDelegateTests: XCTestCase {
     var multicastDelegate: MulticastDelegate<FirstViewControllerDelegate>!
     
+    class MockFirstViewControllerDelegate: FirstViewControllerDelegate {
+        var buttonDidTapCalled = false
+        var text: String = ""
+        
+        func buttonDidTap() {
+            buttonDidTapCalled.toggle()
+        }
+        
+        func doSomething(with text: String) {
+            self.text = text
+        }
+    }
+    
     override func setUp() {
         super.setUp()
         multicastDelegate = MulticastDelegate<FirstViewControllerDelegate>()
     }
     
-    override func tearDown() {
-        multicastDelegate = nil
-        super.tearDown()
-    }
-    
     func testDelegate() {
         let delegate = MockFirstViewControllerDelegate()
         multicastDelegate.delegate(delegate)
-        XCTAssertEqual(multicastDelegate.delegateCount(), 1)
+        XCTAssertEqual(multicastDelegate.delegatesCount, 1)
     }
 
     func testRemove() {
         let delegate1 = MockFirstViewControllerDelegate()
         let delegate2 = MockFirstViewControllerDelegate()
+        
         multicastDelegate.delegate(delegate1)
         multicastDelegate.delegate(delegate2)
-        XCTAssertEqual(multicastDelegate.delegateCount(), 2)
+        XCTAssertEqual(multicastDelegate.delegatesCount, 2)
         
         multicastDelegate.remove(delegate1)
-        XCTAssertEqual(multicastDelegate.delegateCount(), 1)
+        XCTAssertEqual(multicastDelegate.delegatesCount, 1)
         
         multicastDelegate.remove(delegate2)
-        XCTAssertEqual(multicastDelegate.delegateCount(), 0)
+        XCTAssertEqual(multicastDelegate.delegatesCount, 0)
     }
     
     func testCall() {
@@ -55,12 +64,67 @@ final class NotificationCenterDelegateTests: XCTestCase {
         XCTAssertTrue(delegate1.buttonDidTapCalled)
         XCTAssertTrue(delegate2.buttonDidTapCalled)
     }
-}
-
-class MockFirstViewControllerDelegate: FirstViewControllerDelegate {
-    var buttonDidTapCalled = false
     
-    func buttonDidTap() {
-        buttonDidTapCalled = true
+    func testMulticastMultipleDelegate() {
+        let delegate1 = MockFirstViewControllerDelegate()
+        let delegate2 = MockFirstViewControllerDelegate()
+
+        multicastDelegate.delegate(delegate1)
+        multicastDelegate.delegate(delegate2)
+ 
+        multicastDelegate.call {
+            $0.buttonDidTap()
+        }
+
+        XCTAssertTrue(delegate1.buttonDidTapCalled)
+        XCTAssertTrue(delegate2.buttonDidTapCalled)
+    
+        multicastDelegate.remove(delegate1)
+
+        multicastDelegate.call {
+            $0.buttonDidTap()
+        }
+        
+        XCTAssertTrue(delegate1.buttonDidTapCalled)
+        XCTAssertFalse(delegate2.buttonDidTapCalled)
+    }
+    
+    func testMemorySafety() {
+        autoreleasepool {
+            let delegate = MockFirstViewControllerDelegate()
+            multicastDelegate.delegate(delegate)
+        }
+        
+        XCTAssertEqual(multicastDelegate.delegatesCount, 0)
+    }
+    
+    func testThreadSafety() {
+        let delegate = MockFirstViewControllerDelegate()
+        
+        DispatchQueue.global().async {
+            self.multicastDelegate.delegate(delegate)
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+            self.multicastDelegate.call {
+                $0.buttonDidTap()
+            }
+        })
+        
+        DispatchQueue.global().asyncAfter(deadline: .now() + 1.0, execute: {
+            XCTAssertTrue(delegate.buttonDidTapCalled)
+        })
+    }
+    
+    func testTypeSafety() {
+        let delegate = MockFirstViewControllerDelegate()
+        
+        multicastDelegate.delegate(delegate)
+        
+        multicastDelegate.call {
+            $0.doSomething(with: "text")
+        }
+        
+        XCTAssertEqual("text", delegate.text)
     }
 }

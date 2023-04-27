@@ -9,8 +9,10 @@ import UIKit
 
 class FirstViewController: UIViewController {
     @IBAction func buttonDidTap(_ sender: Any) {
-        MyAppNotificationCenter.firstViewController.call {
-            $0.buttonDidTap()
+        DispatchQueue.global().async {
+            MyAppNotificationCenter.firstViewController.call {
+                $0.buttonDidTap()
+            }
         }
     }
 }
