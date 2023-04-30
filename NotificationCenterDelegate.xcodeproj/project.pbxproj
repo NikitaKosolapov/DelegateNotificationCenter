@@ -14,7 +14,7 @@
 		1173A7DC29F9AF0900840B00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1173A7DA29F9AF0900840B00 /* LaunchScreen.storyboard */; };
 		1173A7E429F9AF9800840B00 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173A7E329F9AF9800840B00 /* SecondViewController.swift */; };
 		1173A7E629F9AFA900840B00 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173A7E529F9AFA900840B00 /* ThirdViewController.swift */; };
-		1173A7E829F9B14700840B00 /* FirstViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173A7E729F9B14700840B00 /* FirstViewControllerDelegate.swift */; };
+		1173A7E829F9B14700840B00 /* FirstViewControllerNotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173A7E729F9B14700840B00 /* FirstViewControllerNotificationDelegate.swift */; };
 		1173A7EA29F9B17200840B00 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173A7E929F9B17200840B00 /* MulticastDelegate.swift */; };
 		1173A7EC29F9B19000840B00 /* MyAppNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173A7EB29F9B19000840B00 /* MyAppNotificationCenter.swift */; };
 		1173A81429F9C1B800840B00 /* NotificationCenterDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173A81329F9C1B800840B00 /* NotificationCenterDelegateTests.swift */; };
@@ -42,7 +42,7 @@
 		1173A7DD29F9AF0900840B00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1173A7E329F9AF9800840B00 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		1173A7E529F9AFA900840B00 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		1173A7E729F9B14700840B00 /* FirstViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewControllerDelegate.swift; sourceTree = "<group>"; };
+		1173A7E729F9B14700840B00 /* FirstViewControllerNotificationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewControllerNotificationDelegate.swift; sourceTree = "<group>"; };
 		1173A7E929F9B17200840B00 /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
 		1173A7EB29F9B19000840B00 /* MyAppNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppNotificationCenter.swift; sourceTree = "<group>"; };
 		1173A81129F9C1B800840B00 /* NotificationCenterDelegateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotificationCenterDelegateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				1173A82229FAE9FF00840B00 /* TabBarNotificationDelegate.swift */,
-				1173A7E729F9B14700840B00 /* FirstViewControllerDelegate.swift */,
+				1173A7E729F9B14700840B00 /* FirstViewControllerNotificationDelegate.swift */,
 			);
 			path = "Delegate protocols";
 			sourceTree = "<group>";
@@ -242,7 +242,7 @@
 			files = (
 				1173A82129FAE97400840B00 /* TabBarController.swift in Sources */,
 				1173A7E429F9AF9800840B00 /* SecondViewController.swift in Sources */,
-				1173A7E829F9B14700840B00 /* FirstViewControllerDelegate.swift in Sources */,
+				1173A7E829F9B14700840B00 /* FirstViewControllerNotificationDelegate.swift in Sources */,
 				1173A7EA29F9B17200840B00 /* MulticastDelegate.swift in Sources */,
 				1173A82329FAE9FF00840B00 /* TabBarNotificationDelegate.swift in Sources */,
 				1173A7D429F9AF0700840B00 /* FirstViewController.swift in Sources */,

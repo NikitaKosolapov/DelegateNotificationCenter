@@ -21,8 +21,8 @@ extension ThirdViewController: TabBarNotificationDelegate {
     }
 }
 
-extension ThirdViewController: FirstViewControllerDelegate {
-    func firstViewControllerButtonDidTap() {
+extension ThirdViewController: FirstViewControllerNotificationDelegate {
+    func buttonDidTap() {
         print(type(of: self), #function)
     }
 }

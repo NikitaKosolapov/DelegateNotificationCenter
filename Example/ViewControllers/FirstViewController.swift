@@ -15,7 +15,7 @@ class FirstViewController: UIViewController {
     
     @IBAction func buttonDidTap(_ sender: Any) {
         MyAppNotificationCenter.firstViewController.call {
-            $0.firstViewControllerButtonDidTap()
+            $0.buttonDidTap()
         }
     }
 }
@@ -23,5 +23,9 @@ class FirstViewController: UIViewController {
 extension FirstViewController: TabBarNotificationDelegate {
     func tabBarDidSelect(with tag: Int) {
         print(type(of: self), #function, tag)
+    }
+    
+    func didBeginCustomizing() {
+        print(type(of: self), #function)
     }
 }

@@ -9,13 +9,13 @@ import XCTest
 @testable import NotificationCenterDelegate
 
 final class NotificationCenterDelegateTests: XCTestCase {
-    var multicastDelegate: MulticastDelegate<FirstViewControllerDelegate>!
+    var multicastDelegate: MulticastDelegate<FirstViewControllerNotificationDelegate>!
     
-    class MockFirstViewControllerDelegate: FirstViewControllerDelegate {
+    class MockFirstViewControllerDelegate: FirstViewControllerNotificationDelegate {
         var buttonDidTapCalled = false
         var text: String = ""
         
-        func firstViewControllerButtonDidTap() {
+        func buttonDidTap() {
             buttonDidTapCalled.toggle()
         }
         
@@ -26,7 +26,7 @@ final class NotificationCenterDelegateTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        multicastDelegate = MulticastDelegate<FirstViewControllerDelegate>()
+        multicastDelegate = MulticastDelegate<FirstViewControllerNotificationDelegate>()
     }
     
     func testDelegate() {
@@ -58,7 +58,7 @@ final class NotificationCenterDelegateTests: XCTestCase {
         multicastDelegate.delegate(delegate2)
         
         multicastDelegate.call {
-            $0.firstViewControllerButtonDidTap()
+            $0.buttonDidTap()
         }
         
         XCTAssertTrue(delegate1.buttonDidTapCalled)
@@ -73,7 +73,7 @@ final class NotificationCenterDelegateTests: XCTestCase {
         multicastDelegate.delegate(delegate2)
  
         multicastDelegate.call {
-            $0.firstViewControllerButtonDidTap()
+            $0.buttonDidTap()
         }
 
         XCTAssertTrue(delegate1.buttonDidTapCalled)
@@ -82,7 +82,7 @@ final class NotificationCenterDelegateTests: XCTestCase {
         multicastDelegate.remove(delegate1)
 
         multicastDelegate.call {
-            $0.firstViewControllerButtonDidTap()
+            $0.buttonDidTap()
         }
         
         XCTAssertTrue(delegate1.buttonDidTapCalled)
@@ -107,7 +107,7 @@ final class NotificationCenterDelegateTests: XCTestCase {
         
         DispatchQueue.global().asyncAfter(deadline: .now() + 0.5, execute: {
             self.multicastDelegate.call {
-                $0.firstViewControllerButtonDidTap()
+                $0.buttonDidTap()
             }
         })
         

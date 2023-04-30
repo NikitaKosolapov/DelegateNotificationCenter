@@ -17,4 +17,10 @@ class TabBarController: UITabBarController {
             $0.tabBarDidSelect(with: item.tag)
         }
     }
+    
+    override func tabBar(_ tabBar: UITabBar, didBeginCustomizing items: [UITabBarItem]) {
+        MyAppNotificationCenter.tabBar.call {
+            $0.didBeginCustomizing()
+        }
+    }
 }

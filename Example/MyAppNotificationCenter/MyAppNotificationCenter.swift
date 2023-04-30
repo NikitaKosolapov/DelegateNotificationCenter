@@ -9,7 +9,7 @@ import Foundation
 
 class MyAppNotificationCenter {
     /// One-to-one
-    static var firstViewController = MulticastDelegate<FirstViewControllerDelegate>()
+    static var firstViewController = MulticastDelegate<FirstViewControllerNotificationDelegate>()
     /// One-to-many
     static var tabBar = MulticastDelegate<TabBarNotificationDelegate>()
 }
