@@ -15,7 +15,7 @@ final class NotificationCenterDelegateTests: XCTestCase {
         var buttonDidTapCalled = false
         var text: String = ""
         
-        func buttonDidTap() {
+        func firstViewControllerButtonDidTap() {
             buttonDidTapCalled.toggle()
         }
         
@@ -58,7 +58,7 @@ final class NotificationCenterDelegateTests: XCTestCase {
         multicastDelegate.delegate(delegate2)
         
         multicastDelegate.call {
-            $0.buttonDidTap()
+            $0.firstViewControllerButtonDidTap()
         }
         
         XCTAssertTrue(delegate1.buttonDidTapCalled)
@@ -73,7 +73,7 @@ final class NotificationCenterDelegateTests: XCTestCase {
         multicastDelegate.delegate(delegate2)
  
         multicastDelegate.call {
-            $0.buttonDidTap()
+            $0.firstViewControllerButtonDidTap()
         }
 
         XCTAssertTrue(delegate1.buttonDidTapCalled)
@@ -82,7 +82,7 @@ final class NotificationCenterDelegateTests: XCTestCase {
         multicastDelegate.remove(delegate1)
 
         multicastDelegate.call {
-            $0.buttonDidTap()
+            $0.firstViewControllerButtonDidTap()
         }
         
         XCTAssertTrue(delegate1.buttonDidTapCalled)
@@ -105,9 +105,9 @@ final class NotificationCenterDelegateTests: XCTestCase {
             self.multicastDelegate.delegate(delegate)
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+        DispatchQueue.global().asyncAfter(deadline: .now() + 0.5, execute: {
             self.multicastDelegate.call {
-                $0.buttonDidTap()
+                $0.firstViewControllerButtonDidTap()
             }
         })
         

@@ -18,6 +18,8 @@
 		1173A7EA29F9B17200840B00 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173A7E929F9B17200840B00 /* MulticastDelegate.swift */; };
 		1173A7EC29F9B19000840B00 /* MyAppNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173A7EB29F9B19000840B00 /* MyAppNotificationCenter.swift */; };
 		1173A81429F9C1B800840B00 /* NotificationCenterDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173A81329F9C1B800840B00 /* NotificationCenterDelegateTests.swift */; };
+		1173A82129FAE97400840B00 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173A82029FAE97400840B00 /* TabBarController.swift */; };
+		1173A82329FAE9FF00840B00 /* TabBarNotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173A82229FAE9FF00840B00 /* TabBarNotificationDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		1173A7EB29F9B19000840B00 /* MyAppNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppNotificationCenter.swift; sourceTree = "<group>"; };
 		1173A81129F9C1B800840B00 /* NotificationCenterDelegateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotificationCenterDelegateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1173A81329F9C1B800840B00 /* NotificationCenterDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterDelegateTests.swift; sourceTree = "<group>"; };
+		1173A82029FAE97400840B00 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		1173A82229FAE9FF00840B00 /* TabBarNotificationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarNotificationDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 				1173A7D329F9AF0700840B00 /* FirstViewController.swift */,
 				1173A7E329F9AF9800840B00 /* SecondViewController.swift */,
 				1173A7E529F9AFA900840B00 /* ThirdViewController.swift */,
+				1173A82029FAE97400840B00 /* TabBarController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -118,11 +123,20 @@
 		1173A81D29FA683900840B00 /* MyAppNotificationCenter */ = {
 			isa = PBXGroup;
 			children = (
-				1173A7E729F9B14700840B00 /* FirstViewControllerDelegate.swift */,
+				11E582A729FE8876000CEC5D /* Delegate protocols */,
 				1173A7E929F9B17200840B00 /* MulticastDelegate.swift */,
 				1173A7EB29F9B19000840B00 /* MyAppNotificationCenter.swift */,
 			);
 			path = MyAppNotificationCenter;
+			sourceTree = "<group>";
+		};
+		11E582A729FE8876000CEC5D /* Delegate protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1173A82229FAE9FF00840B00 /* TabBarNotificationDelegate.swift */,
+				1173A7E729F9B14700840B00 /* FirstViewControllerDelegate.swift */,
+			);
+			path = "Delegate protocols";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,9 +240,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1173A82129FAE97400840B00 /* TabBarController.swift in Sources */,
 				1173A7E429F9AF9800840B00 /* SecondViewController.swift in Sources */,
 				1173A7E829F9B14700840B00 /* FirstViewControllerDelegate.swift in Sources */,
 				1173A7EA29F9B17200840B00 /* MulticastDelegate.swift in Sources */,
+				1173A82329FAE9FF00840B00 /* TabBarNotificationDelegate.swift in Sources */,
 				1173A7D429F9AF0700840B00 /* FirstViewController.swift in Sources */,
 				1173A7E629F9AFA900840B00 /* ThirdViewController.swift in Sources */,
 				1173A7D029F9AF0700840B00 /* AppDelegate.swift in Sources */,

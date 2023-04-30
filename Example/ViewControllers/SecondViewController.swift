@@ -10,12 +10,12 @@ import UIKit
 class SecondViewController: UIViewController {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        MyAppNotificationCenter.firstViewController.delegate(self)
+        MyAppNotificationCenter.tabBar.delegate(self)
     }
 }
 
-extension SecondViewController: FirstViewControllerDelegate {
-    func buttonDidTap() {
-        print(#function, "at the SecondViewController")
+extension SecondViewController: TabBarNotificationDelegate {
+    func tabBarDidSelect(with tag: Int) {
+        print(type(of: self), #function, tag)
     }
 }

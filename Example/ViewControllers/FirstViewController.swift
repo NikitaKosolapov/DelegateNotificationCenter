@@ -8,12 +8,20 @@
 import UIKit
 
 class FirstViewController: UIViewController {
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        MyAppNotificationCenter.tabBar.delegate(self)
+    }
+    
     @IBAction func buttonDidTap(_ sender: Any) {
-        DispatchQueue.global().async {
-            MyAppNotificationCenter.firstViewController.call {
-                $0.buttonDidTap()
-            }
+        MyAppNotificationCenter.firstViewController.call {
+            $0.firstViewControllerButtonDidTap()
         }
     }
 }
 
+extension FirstViewController: TabBarNotificationDelegate {
+    func tabBarDidSelect(with tag: Int) {
+        print(type(of: self), #function, tag)
+    }
+}

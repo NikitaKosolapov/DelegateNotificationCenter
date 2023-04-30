@@ -10,14 +10,20 @@ import UIKit
 class ThirdViewController: UIViewController {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        MyAppNotificationCenter.tabBar.delegate(self)
         MyAppNotificationCenter.firstViewController.delegate(self)
     }
 }
 
-extension ThirdViewController: FirstViewControllerDelegate {
-    func buttonDidTap() {
-        print(#function, "at the ThirdViewController")
+extension ThirdViewController: TabBarNotificationDelegate {
+    func tabBarDidSelect(with tag: Int) {
+        print(type(of: self), #function, tag)
     }
 }
 
+extension ThirdViewController: FirstViewControllerDelegate {
+    func firstViewControllerButtonDidTap() {
+        print(type(of: self), #function)
+    }
+}
 

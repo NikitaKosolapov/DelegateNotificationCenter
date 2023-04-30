@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Third-->
+        <!--Third View Controller-->
         <scene sceneID="1S8-fJ-xaq">
             <objects>
                 <viewController id="HLr-Yw-wPr" customClass="ThirdViewController" customModule="NotificationCenterDelegate" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,15 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="YVN-mn-Hio"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Third" id="WzT-uG-dzh"/>
+                    <tabBarItem key="tabBarItem" tag="2" systemItem="more" id="WzT-uG-dzh">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2wJ-d4-m8r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="989" y="702"/>
         </scene>
-        <!--First-->
+        <!--First View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="NotificationCenterDelegate" customModuleProvider="target" sceneMemberID="viewController">
@@ -49,7 +51,7 @@
                             <constraint firstItem="5j8-7F-3Qe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="w9Y-7n-OMv"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" id="ktc-3F-wFn"/>
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="ktc-3F-wFn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -58,12 +60,11 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Eoo-6l-ZKA">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="mIO-Jc-BtE" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="mIO-Jc-BtE" customClass="TabBarController" customModule="NotificationCenterDelegate" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VJV-jF-hEk">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="tbc-Ys-VqV"/>
@@ -75,7 +76,7 @@
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
         </scene>
-        <!--Second-->
+        <!--Second View Controller-->
         <scene sceneID="RzV-M9-e1x">
             <objects>
                 <viewController id="Dmv-EC-TE2" customClass="SecondViewController" customModule="NotificationCenterDelegate" customModuleProvider="target" sceneMemberID="viewController">
@@ -83,9 +84,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Iaf-JQ-jYW"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" id="Itd-Fb-wH5"/>
+                    <tabBarItem key="tabBarItem" tag="1" systemItem="recents" id="Itd-Fb-wH5">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BqV-Eq-0vt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

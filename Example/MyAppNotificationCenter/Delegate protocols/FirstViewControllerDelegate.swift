@@ -9,12 +9,12 @@ import Foundation
 
 
 protocol FirstViewControllerDelegate: AnyObject {
-    func buttonDidTap()
+    func firstViewControllerButtonDidTap()
     func doSomething(with text: String)
 }
 
 // Empty default implementation
 extension FirstViewControllerDelegate {
-    func buttonDidTap() {}
+    func firstViewControllerButtonDidTap() {}
     func doSomething(with text: String) {}
 }
