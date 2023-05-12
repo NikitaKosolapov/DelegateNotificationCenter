@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import NotificationCenterDelegate
+@testable import DelegateNotificationCenter
 
 protocol NotificationDelegate: AnyObject {
     func buttonDidTap()
@@ -26,7 +26,7 @@ class MockFirstViewControllerDelegate: NotificationDelegate {
     }
 }
 
-final class NotificationCenterDelegateTests: XCTestCase {
+final class DelegateNotificationCenterTests: XCTestCase {
     var multicastDelegate: MulticastDelegate<NotificationDelegate>!
     
     override func setUp() {
