@@ -8,22 +8,20 @@
 import UIKit
 
 class ThirdViewController: UIViewController {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        MyAppNotificationCenter.tabBar.delegate(self)
+        tabBarItem = .init(tabBarSystemItem: .more, tag: 2)
+    }
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        MyAppNotificationCenter.tabBar.delegate(self)
-        MyAppNotificationCenter.firstViewController.delegate(self)
     }
 }
 
 extension ThirdViewController: TabBarNotificationDelegate {
     func tabBarDidSelect(with tag: Int) {
         print(type(of: self), #function, tag)
-    }
-}
-
-extension ThirdViewController: FirstViewControllerNotificationDelegate {
-    func buttonDidTap() {
-        print(type(of: self), #function)
     }
 }
 

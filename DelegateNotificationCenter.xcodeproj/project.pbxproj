@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1173A7D029F9AF0700840B00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173A7CF29F9AF0700840B00 /* AppDelegate.swift */; };
 		1173A7D429F9AF0700840B00 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173A7D329F9AF0700840B00 /* FirstViewController.swift */; };
-		1173A7D729F9AF0700840B00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1173A7D529F9AF0700840B00 /* Main.storyboard */; };
 		1173A7D929F9AF0800840B00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1173A7D829F9AF0800840B00 /* Assets.xcassets */; };
 		1173A7DC29F9AF0900840B00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1173A7DA29F9AF0900840B00 /* LaunchScreen.storyboard */; };
 		1173A7E429F9AF9800840B00 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173A7E329F9AF9800840B00 /* SecondViewController.swift */; };
@@ -33,10 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1173A7CC29F9AF0700840B00 /* NotificationCenterDelegate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotificationCenterDelegate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1173A7CC29F9AF0700840B00 /* DelegateNotificationCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DelegateNotificationCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1173A7CF29F9AF0700840B00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1173A7D329F9AF0700840B00 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		1173A7D629F9AF0700840B00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1173A7D829F9AF0800840B00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1173A7DB29F9AF0900840B00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1173A7DD29F9AF0900840B00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,7 +43,7 @@
 		1173A7E729F9B14700840B00 /* FirstViewControllerNotificationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewControllerNotificationDelegate.swift; sourceTree = "<group>"; };
 		1173A7E929F9B17200840B00 /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
 		1173A7EB29F9B19000840B00 /* MyAppNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppNotificationCenter.swift; sourceTree = "<group>"; };
-		1173A81129F9C1B800840B00 /* NotificationCenterDelegateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotificationCenterDelegateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1173A81129F9C1B800840B00 /* DelegateNotificationCenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DelegateNotificationCenterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1173A81329F9C1B800840B00 /* NotificationCenterDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterDelegateTests.swift; sourceTree = "<group>"; };
 		1173A82029FAE97400840B00 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		1173A82229FAE9FF00840B00 /* TabBarNotificationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarNotificationDelegate.swift; sourceTree = "<group>"; };
@@ -81,8 +79,8 @@
 		1173A7CD29F9AF0700840B00 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1173A7CC29F9AF0700840B00 /* NotificationCenterDelegate.app */,
-				1173A81129F9C1B800840B00 /* NotificationCenterDelegateTests.xctest */,
+				1173A7CC29F9AF0700840B00 /* DelegateNotificationCenter.app */,
+				1173A81129F9C1B800840B00 /* DelegateNotificationCenterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,7 +91,6 @@
 				1173A81D29FA683900840B00 /* MyAppNotificationCenter */,
 				1173A81C29FA682E00840B00 /* ViewControllers */,
 				1173A7CF29F9AF0700840B00 /* AppDelegate.swift */,
-				1173A7D529F9AF0700840B00 /* Main.storyboard */,
 				1173A7D829F9AF0800840B00 /* Assets.xcassets */,
 				1173A7DA29F9AF0900840B00 /* LaunchScreen.storyboard */,
 				1173A7DD29F9AF0900840B00 /* Info.plist */,
@@ -142,9 +139,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1173A7CB29F9AF0700840B00 /* NotificationCenterDelegate */ = {
+		1173A7CB29F9AF0700840B00 /* DelegateNotificationCenter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1173A7E029F9AF0900840B00 /* Build configuration list for PBXNativeTarget "NotificationCenterDelegate" */;
+			buildConfigurationList = 1173A7E029F9AF0900840B00 /* Build configuration list for PBXNativeTarget "DelegateNotificationCenter" */;
 			buildPhases = (
 				1173A7C829F9AF0700840B00 /* Sources */,
 				1173A7C929F9AF0700840B00 /* Frameworks */,
@@ -154,14 +151,14 @@
 			);
 			dependencies = (
 			);
-			name = NotificationCenterDelegate;
+			name = DelegateNotificationCenter;
 			productName = NotificationCenterDelegate;
-			productReference = 1173A7CC29F9AF0700840B00 /* NotificationCenterDelegate.app */;
+			productReference = 1173A7CC29F9AF0700840B00 /* DelegateNotificationCenter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1173A81029F9C1B800840B00 /* NotificationCenterDelegateTests */ = {
+		1173A81029F9C1B800840B00 /* DelegateNotificationCenterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1173A81729F9C1B800840B00 /* Build configuration list for PBXNativeTarget "NotificationCenterDelegateTests" */;
+			buildConfigurationList = 1173A81729F9C1B800840B00 /* Build configuration list for PBXNativeTarget "DelegateNotificationCenterTests" */;
 			buildPhases = (
 				1173A80D29F9C1B800840B00 /* Sources */,
 				1173A80E29F9C1B800840B00 /* Frameworks */,
@@ -172,9 +169,9 @@
 			dependencies = (
 				1173A81629F9C1B800840B00 /* PBXTargetDependency */,
 			);
-			name = NotificationCenterDelegateTests;
+			name = DelegateNotificationCenterTests;
 			productName = NotificationCenterDelegateTests;
-			productReference = 1173A81129F9C1B800840B00 /* NotificationCenterDelegateTests.xctest */;
+			productReference = 1173A81129F9C1B800840B00 /* DelegateNotificationCenterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -196,7 +193,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1173A7C729F9AF0700840B00 /* Build configuration list for PBXProject "NotificationCenterDelegate" */;
+			buildConfigurationList = 1173A7C729F9AF0700840B00 /* Build configuration list for PBXProject "DelegateNotificationCenter" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -209,8 +206,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1173A7CB29F9AF0700840B00 /* NotificationCenterDelegate */,
-				1173A81029F9C1B800840B00 /* NotificationCenterDelegateTests */,
+				1173A7CB29F9AF0700840B00 /* DelegateNotificationCenter */,
+				1173A81029F9C1B800840B00 /* DelegateNotificationCenterTests */,
 			);
 		};
 /* End PBXProject section */
@@ -222,7 +219,6 @@
 			files = (
 				1173A7DC29F9AF0900840B00 /* LaunchScreen.storyboard in Resources */,
 				1173A7D929F9AF0800840B00 /* Assets.xcassets in Resources */,
-				1173A7D729F9AF0700840B00 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,20 +261,12 @@
 /* Begin PBXTargetDependency section */
 		1173A81629F9C1B800840B00 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1173A7CB29F9AF0700840B00 /* NotificationCenterDelegate */;
+			target = 1173A7CB29F9AF0700840B00 /* DelegateNotificationCenter */;
 			targetProxy = 1173A81529F9C1B800840B00 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1173A7D529F9AF0700840B00 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1173A7D629F9AF0700840B00 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1173A7DA29F9AF0900840B00 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -413,7 +401,7 @@
 				INFOPLIST_FILE = Example/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -441,7 +429,7 @@
 				INFOPLIST_FILE = Example/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -472,7 +460,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NotificationCenterDelegate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NotificationCenterDelegate";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DelegateNotificationCenter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DelegateNotificationCenter";
 			};
 			name = Debug;
 		};
@@ -490,14 +478,14 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NotificationCenterDelegate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NotificationCenterDelegate";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DelegateNotificationCenter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DelegateNotificationCenter";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1173A7C729F9AF0700840B00 /* Build configuration list for PBXProject "NotificationCenterDelegate" */ = {
+		1173A7C729F9AF0700840B00 /* Build configuration list for PBXProject "DelegateNotificationCenter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1173A7DE29F9AF0900840B00 /* Debug */,
@@ -506,7 +494,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1173A7E029F9AF0900840B00 /* Build configuration list for PBXNativeTarget "NotificationCenterDelegate" */ = {
+		1173A7E029F9AF0900840B00 /* Build configuration list for PBXNativeTarget "DelegateNotificationCenter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1173A7E129F9AF0900840B00 /* Debug */,
@@ -515,7 +503,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1173A81729F9C1B800840B00 /* Build configuration list for PBXNativeTarget "NotificationCenterDelegateTests" */ = {
+		1173A81729F9C1B800840B00 /* Build configuration list for PBXNativeTarget "DelegateNotificationCenterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1173A81829F9C1B800840B00 /* Debug */,

@@ -8,8 +8,21 @@
 import UIKit
 
 class TabBarController: UITabBarController {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        
+        viewControllers = [FirstViewController(),
+                           SecondViewController(),
+                           ThirdViewController()]
+    }
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {

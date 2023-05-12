@@ -1,32 +1,30 @@
-//
-//  NotificationCenterDelegateTests.swift
-//  NotificationCenterDelegateTests
-//
-//  Created by Nikita on 26.04.2023.
-//
-
 import XCTest
-@testable import NotificationCenterDelegate
+@testable import DelegateNotificationCenter
 
-final class NotificationCenterDelegateTests: XCTestCase {
-    var multicastDelegate: MulticastDelegate<FirstViewControllerNotificationDelegate>!
+protocol NotificationDelegate: AnyObject {
+    func buttonDidTap()
+    func doSomething(with text: String)
+}
+
+class MockFirstViewControllerDelegate: NotificationDelegate {
+    var buttonDidTapCalled = false
+    var text: String = ""
     
-    class MockFirstViewControllerDelegate: FirstViewControllerNotificationDelegate {
-        var buttonDidTapCalled = false
-        var text: String = ""
-        
-        func buttonDidTap() {
-            buttonDidTapCalled.toggle()
-        }
-        
-        func doSomething(with text: String) {
-            self.text = text
-        }
+    func buttonDidTap() {
+        buttonDidTapCalled.toggle()
     }
+    
+    func doSomething(with text: String) {
+        self.text = text
+    }
+}
+
+final class DelegateNotificationCenterTests: XCTestCase {
+    var multicastDelegate: MulticastDelegate<NotificationDelegate>!
     
     override func setUp() {
         super.setUp()
-        multicastDelegate = MulticastDelegate<FirstViewControllerNotificationDelegate>()
+        multicastDelegate = MulticastDelegate<NotificationDelegate>()
     }
     
     func testDelegate() {
