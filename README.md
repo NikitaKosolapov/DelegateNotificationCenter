@@ -196,7 +196,7 @@ public class MulticastDelegate<T> {
 #### Swift Package Manager
 
 ```swift
-.Package(url: "https://github.com/NikitaKosolapov/DelegateNotificationCenter.git", majorVersion: 1)
+.package(name: "DelegateNotificationCenter", url: "https://github.com/NikitaKosolapov/DelegateNotificationCenter.git", from: "1.0.0")
 ```
  
 #### Cocoa pods
