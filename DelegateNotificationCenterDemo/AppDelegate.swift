@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  NotificationCenterDelegate
+//  DelegateNotificationCenterDemo
 //
-//  Created by Nikita on 26.04.2023.
+//  Created by Nikita on 13.05.2023.
 //
 
 import UIKit

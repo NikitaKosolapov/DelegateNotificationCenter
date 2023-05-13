@@ -1,12 +1,12 @@
 //
-//  NotificationCenterDelegateTests.swift
-//  NotificationCenterDelegateTests
+//  DelegateNotificationCenterDemoTests.swift
+//  DelegateNotificationCenterDemoTests
 //
-//  Created by Nikita on 26.04.2023.
+//  Created by Nikita on 13.05.2023.
 //
 
 import XCTest
-@testable import DelegateNotificationCenter
+@testable import DelegateNotificationCenterDemo
 
 protocol NotificationDelegate: AnyObject {
     func buttonDidTap()
@@ -26,7 +26,7 @@ class MockFirstViewControllerDelegate: NotificationDelegate {
     }
 }
 
-final class DelegateNotificationCenterTests: XCTestCase {
+final class DelegateNotificationCenterDemoTests: XCTestCase {
     var multicastDelegate: MulticastDelegate<NotificationDelegate>!
     
     override func setUp() {
