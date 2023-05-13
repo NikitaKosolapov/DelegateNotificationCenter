@@ -5,13 +5,15 @@
  ![](http://img.shields.io/badge/Swift-5.0-blue.svg)
 
 
-Super simple and most reliable solution to replace NotificationCenter.
+Super simple solution to replace NotificationCenter using Multicast Delegate pattern
 
-✅ Type Safe
+✅ Type Safe 
 
 ✅ Thread Safe
 
 ✅ Memory Safety
+
+💯 Fully Tested
 
 Benefits of DelegateNotificationCenter over NotificationCenter:
     
