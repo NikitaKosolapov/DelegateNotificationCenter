@@ -209,5 +209,7 @@ DelegateNotificationCenter is under the MIT license.
 
 ## Resources
 https://www.vadimbulavin.com/multicast-delegate/
+ 
 https://nalexn.github.io/callbacks-part-1-delegation-notificationcenter-kvo/
+ 
 https://assets.alexandria.raywenderlich.com/books/des/images/c57492352703ffd13faa67205936b3bcb113947305da80d0be80770d0ceea10e/original.png
