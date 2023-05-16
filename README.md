@@ -167,7 +167,7 @@ extension FirstViewControllerDelegate {
     
 #### Manually
 
-Just copy MulticastDelegate.swift to your project 
+Just copy MulticastDelegate.swift to your project and follow the steps above
 
 ```
 public class MulticastDelegate<T> {
