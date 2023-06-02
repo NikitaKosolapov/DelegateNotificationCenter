@@ -5,13 +5,15 @@
  ![](http://img.shields.io/badge/Swift-5.0-blue.svg)
 
 
-Super simple and most reliable solution to replace NotificationCenter.
+Super simple solution to replace NotificationCenter using Multicast Delegate pattern
 
-✅ Type Safe
+✅ Type Safe 
 
 ✅ Thread Safe
 
 ✅ Memory Safety
+
+💯 Fully Tested
 
 Benefits of DelegateNotificationCenter over NotificationCenter:
     
@@ -165,7 +167,7 @@ extension FirstViewControllerDelegate {
     
 #### Manually
 
-Just copy MulticastDelegate.swift to your project 
+Just copy MulticastDelegate.swift to your project and follow the steps above
 
 ```
 public class MulticastDelegate<T> {
@@ -196,7 +198,7 @@ public class MulticastDelegate<T> {
 #### Swift Package Manager
 
 ```swift
-.Package(url: "https://github.com/NikitaKosolapov/DelegateNotificationCenter.git", majorVersion: 1)
+.package(name: "DelegateNotificationCenter", url: "https://github.com/NikitaKosolapov/DelegateNotificationCenter.git", from: "1.0.0")
 ```
  
 #### Cocoa pods
@@ -207,5 +209,7 @@ DelegateNotificationCenter is under the MIT license.
 
 ## Resources
 https://www.vadimbulavin.com/multicast-delegate/
+ 
 https://nalexn.github.io/callbacks-part-1-delegation-notificationcenter-kvo/
+ 
 https://assets.alexandria.raywenderlich.com/books/des/images/c57492352703ffd13faa67205936b3bcb113947305da80d0be80770d0ceea10e/original.png
